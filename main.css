@@ -16,6 +16,20 @@ html, body {
 		"footer footer";
 }
 
+.sidebar .wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.sidebar nav ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+}
+
 header {
     grid-area: header;
 }
