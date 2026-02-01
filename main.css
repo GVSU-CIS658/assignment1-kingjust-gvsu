@@ -36,8 +36,12 @@ html, body {
 }
 
 .main {
-	grid-area: main;
-	background-color: orange;
+    grid-area: main;
+    background-color: orange;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
 }
 
 .sidebar {
