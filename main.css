@@ -6,14 +6,18 @@ html, body {
 	Roboto, "Helvetica Neue", Arial, sans-serif;
 	line-height: 1.6;
 	font-size: 16px;
-	color: #1f2933;
-	background: #0f172a;
+    background: radial-gradient(1200px 600px at 20% -10%, #1e293b 0%, #0f172a 60%);
+	color: #e5e7eb;
 }
 
 h1, h2, h3 {
 	line-height: 1.25;
 	margin-top: 0;
 	color: #0f172a;
+}
+
+.main h3 {
+	color: #e5e7eb;
 }
 
 h1 {
@@ -80,12 +84,13 @@ a:hover {
 
 .intro {
 	grid-area: header;
-	background-color: red;
+    background: linear-gradient(180deg, #38bdf8 0%, #6366f1 50%, #8b5cf6 100%);
+	color: white;
 }
 
 .main {
     grid-area: main;
-    background-color: orange;
+    background: linear-gradient(0deg, #38bdf8 0%, #6366f1 50%, #8b5cf6 100%);
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
@@ -94,14 +99,53 @@ a:hover {
 	line-height: 1.7;
 }
 
+.main > * {
+	background: linear-gradient(180deg, #111827 0%, #020617 100%);
+	border-radius: 12px;
+	padding: 1.25rem;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
 .sidebar {
 	grid-area: sidebar;
-	background-color: green;
+    background: linear-gradient(180deg, #1e293b 0%, #020617 100%);
+	color: #e5e7eb;
     font-size: 0.95rem;
 	line-height: 1.6;
 }
 
-footer {
-	grid-area: footer;
-	background-color: pink;
+.sidebar h3 {
+	color: #93c5fd;
+}
+
+.sidebar a {
+	color: #93c5fd;
+}
+
+.sidebar a:hover {
+	color: #e0e7ff;
+}
+
+footer a {
+	display: inline-block;
+	padding: 0.4rem 0.75rem;
+	margin: 0.25rem 0.25rem;
+	border-radius: 4px; /* pill shape */
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+	color: #e0e7ff;
+	text-decoration: none;
+	font-weight: 500;
+	border: 1px solid rgba(99, 102, 241, 0.35);
+	transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+footer a:hover {
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.35), rgba(139, 92, 246, 0.35));
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+	transform: translateY(-1px);
+}
+
+footer a:active {
+	transform: translateY(0);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
