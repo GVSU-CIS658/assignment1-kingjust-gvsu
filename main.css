@@ -1,0 +1,48 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#css-zen-garden {
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 260px 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		"header"
+		"sidebar main"
+		"footer";
+}
+
+.page-wrapper {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+.intro {
+	grid-area: header;
+	background-color: red;
+}
+
+.main {
+	grid-area: main;
+	background-color: orange;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	background-color: green;
+}
+
+footer {
+	grid-area: footer;
+	background-color: pink;
+}
