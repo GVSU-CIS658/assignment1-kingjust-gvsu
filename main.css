@@ -2,23 +2,71 @@ html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+	Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.6;
+	font-size: 16px;
+	color: #1f2933;
+	background: #0f172a;
+}
+
+h1, h2, h3 {
+	line-height: 1.25;
+	margin-top: 0;
+	color: #0f172a;
+}
+
+h1 {
+	font-size: clamp(2rem, 4vw, 3rem);
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: clamp(1.4rem, 2.5vw, 2rem);
+	margin-bottom: 0.75rem;
+}
+
+h3 {
+	font-size: 1.15rem;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+a {
+	color: #2563eb;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.intro {
+	text-align: center;
 }
 
 .page-wrapper {
 	min-height: 100vh;
+    height: 100vh; 
 	width: 100%;
 	display: grid;
-	grid-template-columns: 260px 1fr;
+	grid-template-columns: 5fr 1fr;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas:
 		"header header"
-		"sidebar main"
-		"footer footer";
+		"main main"
+		"sidebar sidebar";
 }
 
 .sidebar .wrapper {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 1rem;
 }
 
@@ -39,14 +87,18 @@ html, body {
     grid-area: main;
     background-color: orange;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 1rem;
 	width: 100%;
+    font-size: 1rem;
+	line-height: 1.7;
 }
 
 .sidebar {
 	grid-area: sidebar;
 	background-color: green;
+    font-size: 0.95rem;
+	line-height: 1.6;
 }
 
 footer {
